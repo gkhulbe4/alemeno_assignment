@@ -57,7 +57,7 @@ function StudentPurchases() {
         Courses you are enrolled to :-
       </h1>
       {data.map((courseData:CourseData) => (
-        <div key={courseData.id} className="flex flex-col">
+        <div key={courseData.id} className="flex flex-col gap-2">
           <div
             onClick={() =>
               navigate(`/course/dashboard/${courseData.course.id}`)

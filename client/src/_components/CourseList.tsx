@@ -33,7 +33,7 @@ function CourseList() {
       navigate("/signin");
     }, 3000);
     return (
-      <h1 className="h-screen">Please signin to see all the courses. Redirecting you to the signin page ...</h1>
+      <h1 className="h-screen">Please sign in to see all the courses. Redirecting you to the sign-in page...</h1>
     )
   }
 
@@ -43,8 +43,8 @@ function CourseList() {
   );
 
   return (
-    <div className="min-h-screen flex flex-col justify-start items-center gap-7">
-      <div className="mt-5 w-[80%]">
+    <div className="min-h-screen flex flex-col justify-start items-center gap-7 p-5 sm:p-10">
+      <div className="w-full sm:w-[80%]">
         <input
           type="text"
           value={searchQuery}
@@ -53,7 +53,7 @@ function CourseList() {
           placeholder="Search a course"
         />
       </div>
-      <div className="flex flex-col gap-7 w-[70%] mb-5">
+      <div className="flex flex-col gap-7 w-full sm:w-[70%] mb-5">
         {filteredCourses.map((course: course) => (
           <div
             key={course.id}
